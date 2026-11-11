@@ -1,0 +1,441 @@
+/* AeroGuard-X1 Blueprint Studio Styling */
+:root {
+  --bg-dark: #040914;
+  --bg-panel: #0a1324;
+  --bg-card: #0f1d38;
+  --border: #1a2f55;
+  --blueprint-bg: #07152b;
+  --blueprint-grid: #0e2a54;
+  --blueprint-line: #38bdf8;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --cyan: #38bdf8;
+  --emerald: #10b981;
+  --amber: #f59e0b;
+  --rose: #f43f5e;
+  --purple: #a855f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  height: 52px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--cyan);
+}
+
+.brand-icon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--border);
+  border-color: var(--cyan);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Prompt Studio Section */
+.prompt-hero {
+  padding: 24px 32px 16px 32px;
+  background: linear-gradient(180deg, var(--bg-panel) 0%, var(--bg-dark) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.prompt-hero-header {
+  margin-bottom: 14px;
+}
+
+.studio-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--cyan);
+  border-radius: 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.prompt-hero-header h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.prompt-hero-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.prompt-input-row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.prompt-input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.prompt-input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.3);
+}
+
+.btn-generate {
+  padding: 0 24px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+
+/* Preset Prompt Chips */
+.preset-chips-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.prompt-chip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.prompt-chip:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+/* Main Studio Layout */
+.studio-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 16px;
+  padding: 16px 24px 24px 24px;
+}
+
+/* Left Blueprint Container */
+.blueprint-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.blueprint-toolbar {
+  padding: 10px 16px;
+  background: rgba(15, 29, 56, 0.7);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-mode-selector {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.view-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.view-btn.active {
+  background: var(--cyan);
+  color: #04142b;
+}
+
+.blueprint-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Blueprint Viewer Container */
+.blueprint-canvas-viewport {
+  flex: 1;
+  min-height: 580px;
+  background: var(--blueprint-bg);
+  position: relative;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blueprintSvgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blueprintSvgContainer svg {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Image Loading Spinner (overlay) */
+.image-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 21, 43, 0.85);
+  backdrop-filter: blur(6px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.loading-overlay.active {
+  display: flex;
+}
+
+.cad-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(56, 189, 248, 0.2);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Right Specifications Sidebar */
+.spec-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.spec-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.spec-card-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--cyan);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drone-header-block {
+  margin-bottom: 14px;
+}
+
+.drone-name-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.drone-config-pill {
+  display: inline-block;
+  padding: 3px 8px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.spec-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.spec-item-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.spec-lbl {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.spec-num {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.feature-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--cyan);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #e2e8f0;
+}
+
+/* Export Buttons Box */
+.export-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-export {
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1100px) {
+  .studio-layout {
+    grid-template-columns: 1fr;
+  }
+}
+

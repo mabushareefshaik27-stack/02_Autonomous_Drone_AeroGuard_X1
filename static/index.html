@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroGuard-X1: Autonomous Multi-Mission Drone Project Portal</title>
+  <link rel="stylesheet" href="css/presentation.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚁</text></svg>">
+  <style>
+    .portal-hero {
+      max-width: 1000px;
+      margin: 40px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .portal-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-cyan);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .portal-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #fff 40%, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+    .portal-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 750px;
+      margin: 0 auto 36px auto;
+      line-height: 1.6;
+    }
+    .portal-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1050px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px;
+    }
+    .portal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s;
+    }
+    .portal-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+    .portal-card-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(56, 189, 248, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+    .portal-card h3 {
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .portal-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body style="overflow-y: auto;">
+
+  <!-- Portal Header -->
+  <header class="pres-header">
+    <div class="brand-tag">
+      <div class="brand-icon-mini">
+        <svg style="width: 16px; height: 16px; fill: #fff;" viewBox="0 0 24 24"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.8L18 8.5v7l-6 3.7-6-3.7v-7l6-3.7z"/></svg>
+      </div>
+      <span>AeroGuard-X1 Final Year Engineering Project</span>
+    </div>
+
+    <div class="header-actions">
+      <a href="blueprint.html" class="btn-ctrl" style="border-color: #38bdf8; color: #38bdf8;">
+        <span>📐 AI Blueprint Studio</span>
+      </a>
+      <a href="/api/drone/download-pptx" class="btn-ctrl btn-download">
+        <span>💾 Download PowerPoint (.pptx)</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="portal-hero">
+    <div class="portal-badge">CAPSTONE FINAL YEAR PROJECT (2026)</div>
+    <h1 class="portal-title">AeroGuard-X1: Autonomous Multi-Mission Drone</h1>
+    <p class="portal-desc">
+      An enterprise-grade autonomous unmanned aerial vehicle (UAV) integrating 6-DOF cascaded PID flight control, 3D obstacle-avoidance path planning, and onboard Edge AI perception for disaster search-and-rescue and precision agriculture.
+    </p>
+  </section>
+
+  <!-- Feature Cards Grid -->
+  <section class="portal-cards">
+    <!-- Card 1: AI Drone Blueprint & Image Studio -->
+    <div class="portal-card" style="border-top: 4px solid var(--accent-cyan);">
+      <div>
+        <div class="portal-card-icon">📐</div>
+        <h3>AI Blueprint & Image Studio</h3>
+        <p>Enter any natural language prompt to dynamically generate aerospace CAD blueprints, multi-view technical drawings, and dimensioned schematics.</p>
+      </div>
+      <a href="blueprint.html" class="btn-ctrl btn-download" style="text-align: center; justify-content: center; text-decoration: none;">
+        Launch Blueprint Studio ▶
+      </a>
+    </div>
+
+    <!-- Card 2: Interactive Power Presentation -->
+    <div class="portal-card" style="border-top: 4px solid #818cf8;">
+      <div>
+        <div class="portal-card-icon">📽️</div>
+        <h3>Power Defense Presentation</h3>
+        <p>15 professional widescreen slides designed for university viva/defense with animations, speaker notes timer, and slide overview.</p>
+      </div>
+      <a href="presentation.html" class="btn-ctrl" style="text-align: center; justify-content: center; text-decoration: none; color: #fff;">
+        Launch Interactive Deck ▶
+      </a>
+    </div>
+
+    <!-- Card 3: Ground Control Station HUD -->
+    <div class="portal-card" style="border-top: 4px solid var(--accent-emerald);">
+      <div>
+        <div class="portal-card-icon">🎮</div>
+        <h3>Tactical Ground Station (GCS)</h3>
+        <p>Aviation Primary Flight Display (PFD) HUD, 3D Flight Digital Twin, 6S LiPo power telemetry, and live YOLOv8 AI detection overlays.</p>
+      </div>
+      <a href="gcs.html" class="btn-ctrl" style="text-align: center; justify-content: center; text-decoration: none; color: #fff;">
+        Open Flight GCS HUD ▶
+      </a>
+    </div>
+
+    <!-- Card 4: Microsoft PowerPoint PPTX -->
+    <div class="portal-card" style="border-top: 4px solid var(--accent-amber);">
+      <div>
+        <div class="portal-card-icon">💾</div>
+        <h3>PowerPoint File (.pptx)</h3>
+        <p>Download the genuine OpenXML presentation file directly for editing in Microsoft PowerPoint, Keynote, or Google Slides.</p>
+      </div>
+      <a href="/api/drone/download-pptx" class="btn-ctrl" style="text-align: center; justify-content: center; text-decoration: none;">
+        Download .PPTX File ⬇
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
+

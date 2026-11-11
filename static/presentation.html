@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroGuard-X1: Final Year Defense Presentation</title>
+  <link rel="stylesheet" href="css/presentation.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚁</text></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="pres-header">
+    <div class="brand-tag">
+      <div class="brand-icon-mini">
+        <svg style="width: 16px; height: 16px; fill: #fff;" viewBox="0 0 24 24"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.8L18 8.5v7l-6 3.7-6-3.7v-7l6-3.7z"/></svg>
+      </div>
+      <span>AeroGuard-X1 Capstone Defense</span>
+    </div>
+
+    <div class="header-actions">
+      <!-- Blueprint Studio Link -->
+      <a href="blueprint.html" class="btn-ctrl" target="_blank" title="AI Drone Blueprint & Image Studio">
+        <span>📐 AI Blueprint Studio</span>
+      </a>
+
+      <!-- Live GCS Simulator Link -->
+      <a href="gcs.html" class="btn-ctrl" target="_blank" title="Open Flight Simulator & Ground Station">
+        <span>🎮 Ground Station HUD</span>
+      </a>
+
+      <!-- Slide Nav Buttons -->
+      <button id="btnPrev" class="btn-ctrl" title="Previous Slide (Left Arrow)">◀</button>
+      <span id="slideCounter" style="font-size: 0.85rem; font-weight: 700; color: var(--accent-cyan); font-variant-numeric: tabular-nums;">01 / 15</span>
+      <button id="btnNext" class="btn-ctrl" title="Next Slide (Right Arrow / Space)">▶</button>
+
+      <!-- Tool Buttons -->
+      <button id="btnNotes" class="btn-ctrl" title="Toggle Speaker Notes (N)">📝 Notes</button>
+      <button id="btnOverview" class="btn-ctrl" title="Slide Overview (O)">🗂️ Overview</button>
+      <button id="btnFullscreen" class="btn-ctrl" title="Toggle Fullscreen (F)">⛶ Fullscreen</button>
+
+      <!-- Direct PowerPoint PPTX Download -->
+      <a href="/api/drone/download-pptx" class="btn-ctrl btn-download" title="Download Official Microsoft PowerPoint (.pptx) File">
+        <span>💾 Download .PPTX</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Slide Viewport Container -->
+  <main class="deck-container">
+    <div class="slide-viewport">
+
+      <!-- SLIDE 1: Title Slide -->
+      <div class="slide active" data-notes="Good morning respected evaluation committee. Today, I am proud to present our final year capstone project: AeroGuard-X1, an autonomous multi-mission unmanned aerial vehicle engineered for mission-critical disaster response and agricultural surveying.">
+        <div class="slide-header">
+          <div class="slide-tag">Final Year Engineering Capstone Defense</div>
+          <h1 class="slide-title" style="background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AeroGuard-X1</h1>
+          <p class="slide-subtitle">Autonomous Multi-Mission Drone with Edge AI Vision & 6-DOF Flight Control</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item">
+              <span class="bullet-dot"></span>
+              <div><strong>Project Scope:</strong> Autonomous Multirotor UAV with Edge AI Vision, 6-DOF Cascaded Control, and 3D Path Planning.</div>
+            </div>
+            <div class="bullet-item">
+              <span class="bullet-dot"></span>
+              <div><strong>Application Domains:</strong> Disaster Search-and-Rescue (SAR) & Precision Agriculture Multispectral Surveying.</div>
+            </div>
+            <div class="bullet-item">
+              <span class="bullet-dot"></span>
+              <div><strong>Department:</strong> Electrical, Aerospace & Computer Science Engineering.</div>
+            </div>
+            <div class="bullet-item">
+              <span class="bullet-dot"></span>
+              <div><strong>Academic Session:</strong> Final Year Capstone Project Defense.</div>
+            </div>
+          </div>
+          <div class="slide-col">
+            <div class="spec-badge-grid">
+              <div class="spec-badge"><div class="spec-badge-title">All-Up Weight (AUW)</div><div class="spec-badge-val">2.45 kg</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">Max Flight Time</div><div class="spec-badge-val">28.5 mins</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">Onboard Edge AI</div><div class="spec-badge-val">40 TOPS (Orin)</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">Thrust-to-Weight</div><div class="spec-badge-val">2.2 : 1 (Nominal)</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>AeroGuard-X1 UAV Capstone</span>
+          <span>Slide 1 of 15</span>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: Problem Statement -->
+      <div class="slide" data-notes="The primary motivation for AeroGuard-X1 stems from the vital 'Golden Hour' in disaster management. Traditional drones require manual pilot telemetry, whereas our platform computes 3D collision-free trajectories and detects human survivors in real-time right on the edge.">
+        <div class="slide-header">
+          <div class="slide-tag">Problem Statement & Motivation</div>
+          <h2 class="slide-title">Why Autonomous Aerial Robotics?</h2>
+          <p class="slide-subtitle">Overcoming the limitations of manual reconnaissance and commercial consumer drones</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Disaster Reconnaissance Hazards:</strong> First responders entering collapsed structures face extreme hazards (gas leaks, structural collapse).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>The Golden Hour Imperative:</strong> Locating trapped victims within the first 60 minutes improves survival likelihood by over 78%.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Precision Agriculture Gaps:</strong> Satellite imagery lacks the temporal resolution and centimetre-level ground sampling distance (GSD) needed for early crop stress detection.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Consumer Drone Bottlenecks:</strong> Off-the-shelf drones require continuous pilot radio link, lack edge computer vision, and suffer from short battery endurance (&lt;18 mins).</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Problem Formulation</span><span>Slide 2 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 3: Objectives & Scope -->
+      <div class="slide" data-notes="Here are our five main engineering deliverables, spanning mechanical design, flight dynamics, power electronics, embedded edge AI, and full telemetry ground software.">
+        <div class="slide-header">
+          <div class="slide-tag">Project Objectives</div>
+          <h2 class="slide-title">Core Technical Deliverables</h2>
+          <p class="slide-subtitle">Multi-disciplinary engineering goals achieved in this capstone</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>1. Mechanical & Propulsion:</strong> Custom 500mm carbon fiber quad-X airframe with a high thrust-to-weight ratio (T/W &ge; 2.2:1).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>2. 6-DOF Flight Dynamics & PID:</strong> Full non-linear mathematical modeling and cascaded attitude/position flight controllers.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>3. Power & Battery Optimization:</strong> 6S LiPo power architecture delivering &gt;28 minutes hover endurance with 450g payload.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>4. Edge AI Perception:</strong> TensorRT-accelerated YOLOv8 on Jetson Orin Nano for victim localization and NDVI crop stress analysis.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>5. Ground Control Station:</strong> Low-latency Web GCS with artificial horizon HUD and 3D digital twin.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Objectives & Scope</span><span>Slide 3 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 4: Architecture -->
+      <div class="slide" data-notes="Our avionics architecture features a dual-brain paradigm: the low-level STM32 microcontroller manages critical 400Hz PID attitude loops, while the high-level Jetson companion computer processes heavy computer vision and 3D path planning.">
+        <div class="slide-header">
+          <div class="slide-tag">System Architecture</div>
+          <h2 class="slide-title">Hierarchical Avionics Hardware Stack</h2>
+          <p class="slide-subtitle">Dual-brain distributed architecture for flight safety and edge processing</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Real-Time Autopilot:</strong> Pixhawk 6C / STM32F7 running PX4 flight stack (attitude rates at 400 Hz).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Edge Companion Computer:</strong> NVIDIA Jetson Orin Nano (1024-core Ampere GPU, 40 TOPS AI compute).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Inter-Processor Link:</strong> High-speed MAVLink protocol over hardware UART (921,600 baud).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Avionics Sensors:</strong> Triple redundant IMUs, Barometer, Magnetometer, and Centimeter RTK-GPS.</div></div>
+          </div>
+          <div class="slide-col">
+            <div class="spec-badge-grid">
+              <div class="spec-badge"><div class="spec-badge-title">Attitude Loop Rate</div><div class="spec-badge-val">400 Hz</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">AI Inference Rate</div><div class="spec-badge-val">28.5 FPS</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">GPS Accuracy</div><div class="spec-badge-val">&plusmn; 2.5 cm (RTK)</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">Telemetry Rate</div><div class="spec-badge-val">12.5 Hz (GCS)</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>System Architecture</span><span>Slide 4 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 5: Mechanical & Airframe -->
+      <div class="slide" data-notes="The mechanical design leverages 3K twill carbon fiber. We conducted FEA simulation under 5G shock loads to ensure structural integrity while keeping the bare frame under 650 grams.">
+        <div class="slide-header">
+          <div class="slide-tag">Mechanical Design</div>
+          <h2 class="slide-title">Carbon Fiber Quad-X Airframe</h2>
+          <p class="slide-subtitle">FEA-optimized chassis with high torsional rigidity</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Chassis Material:</strong> High-modulus 3K Twill Matte Carbon Fiber plates (2.0mm thickness).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Boom Geometry:</strong> 16mm tubular carbon arms with CNC aluminum motor mounts.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Empty Airframe Mass:</strong> 650 grams (high strength-to-weight ratio).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>FEA Loading Simulation:</strong> Verified under 5G acceleration load cases with a Safety Factor of 2.4.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Vibration Isolation:</strong> Silicone damping mounts filtering high-frequency motor harmonics (>120 Hz).</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Mechanical Engineering</span><span>Slide 5 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 6: Propulsion & Aerodynamics -->
+      <div class="slide" data-notes="By calculating induced velocity and disc loading, we achieved an exceptional hover power efficiency of 7.2 grams per watt, operating at an ideal 42.5% hover throttle position.">
+        <div class="slide-header">
+          <div class="slide-tag">Aeronautical Engineering</div>
+          <h2 class="slide-title">Propulsion & Blade Element Analysis</h2>
+          <p class="slide-subtitle">Motor-propeller aerodynamic matching for high hover efficiency</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>BLDC Motors:</strong> 4x 380KV Brushless Outrunners with high-torque curved neodymium magnets.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Propellers:</strong> 14 x 4.8 inch Carbon Fiber high-efficiency folding blades.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Hover Thrust Requirement:</strong> 6.01 N (612.5 g) per motor (24.03 N total).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Max Peak Thrust:</strong> 24.03 N (2,450 g) per motor (Total Peak Thrust = 9.8 kg).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Thrust-to-Weight Ratio:</strong> 4.0:1 burst / 2.2:1 continuous nominal (Hover throttle: 42.5%).</div></div>
+          </div>
+          <div class="slide-col">
+            <div class="spec-badge-grid">
+              <div class="spec-badge"><div class="spec-badge-title">Disc Loading</div><div class="spec-badge-val">60.4 N/m²</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">Induced Velocity</div><div class="spec-badge-val">4.96 m/s</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">Power Loading</div><div class="spec-badge-val">7.20 g/Watt</div></div>
+              <div class="spec-badge"><div class="spec-badge-title">Hover RPM</div><div class="spec-badge-val">5,280 RPM</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Propulsion & Aerodynamics</span><span>Slide 6 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 7: Power & Battery Sizing -->
+      <div class="slide" data-notes="Our power model enforces an 80% depth-of-discharge safeguard to preserve LiPo cell longevity, delivering 28.5 minutes of continuous hovering and over 22 kilometers of cruise range.">
+        <div class="slide-header">
+          <div class="slide-tag">Power Electronics</div>
+          <h2 class="slide-title">Battery Sizing & Energy Dynamics</h2>
+          <p class="slide-subtitle">LiPo discharge modeling, voltage sag, and endurance calculations</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Pack Configuration:</strong> 6S1P (22.2V nominal, 25.2V peak) 6500 mAh 35C Lithium-Polymer.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Total Pack Energy:</strong> 144.3 Watt-hours (Specific energy density: 169.8 Wh/kg).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Hover Electrical Power:</strong> 340.2 Watts (Total hover current: 15.3 Amps).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>80% DoD Usable Capacity:</strong> 5,200 mAh (prevents cell damage and preserves cycle life).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Flight Endurance:</strong> 28.5 minutes hover flight | 22.4 km operational cruise range.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Power & Energy Sizing</span><span>Slide 7 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 8: 6-DOF Flight Dynamics -->
+      <div class="slide" data-notes="The mathematical foundation models the rigid body under 6 degrees of freedom, accounting for gyroscopic precession, motor lag, and aerodynamic parasitic drag.">
+        <div class="slide-header">
+          <div class="slide-tag">Control Theory & Math</div>
+          <h2 class="slide-title">6-DOF Non-Linear Mathematical Model</h2>
+          <p class="slide-subtitle">Newton-Euler translational and rotational equations of motion</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Translational Dynamics (Earth Frame ENU):</strong><br><code>m * d²r/dt² = R_B^E * [0, 0, T_total]' - [0, 0, m*g]' - F_drag</code></div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Rotational Dynamics (Body Frame):</strong><br><code>I * d&omega;/dt = &tau;_body - &omega; &times; (I * &omega;)</code></div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Inertia Tensor:</strong> <code>Ixx = 0.0285, Iyy = 0.0285, Izz = 0.0510 kg&middot;m²</code>.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Actuator Dynamics:</strong> First-order motor response model with 40ms time constant.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Flight Dynamics</span><span>Slide 8 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 9: Cascaded PID Controller -->
+      <div class="slide" data-notes="Our cascaded control architecture separates fast rate dynamics (400 Hz) from kinematic position tracking, providing robust rejection against wind gusts up to 28 km/h.">
+        <div class="slide-header">
+          <div class="slide-tag">Avionics & Automation</div>
+          <h2 class="slide-title">Cascaded Dual-Loop PID Controller</h2>
+          <p class="slide-subtitle">Attitude rate, angle, altitude, and trajectory tracking loops</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Inner Rate Loop (400 Hz):</strong> Controls angular rates (p, q, r) directly producing motor torque commands.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Middle Attitude Loop (100 Hz):</strong> Converts roll/pitch/yaw angle errors into target angular velocity demands.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Outer Position Loop (50 Hz):</strong> Converts 3D waypoint displacement errors into target vehicle tilt angles.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Anti-Windup Integrator:</strong> Clamped back-calculation preventing integrator saturation during step transients.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>PID Control Loops</span><span>Slide 9 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 10: Path Planning -->
+      <div class="slide" data-notes="We implemented custom 3D path planning algorithms, including an expanding Archimedean spiral for search-and-rescue, and a boustrophedon sweep pattern for agricultural orthomosaic mapping.">
+        <div class="slide-header">
+          <div class="slide-tag">Autonomous Navigation</div>
+          <h2 class="slide-title">3D A* Path Planning & Mission Generation</h2>
+          <p class="slide-subtitle">Collision avoidance, survey grids, and SAR search patterns</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>3D A* Heuristic Search:</strong> Evaluates Euclidean distance to generate collision-free trajectories around obstacles.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Search & Rescue Spiral:</strong> Archimedean expanding spiral trajectory maximizing ground sensor coverage in disaster areas.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Precision Agriculture Grid:</strong> Boustrophedon (lawnmower) path with 75% lateral overlap for orthomosaic mapping.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Failsafe Autonomous RTL:</strong> Safe altitude climb to 15m, translation to home, and smooth vertical descent.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Autonomous Navigation</span><span>Slide 10 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 11: Edge AI Vision -->
+      <div class="slide" data-notes="By running YOLOv8 INT8 inference directly onboard the Jetson Orin Nano, the drone requires zero cloud connectivity to locate trapped survivors and broadcast their exact coordinates to rescue teams.">
+        <div class="slide-header">
+          <div class="slide-tag">Computer Vision & Edge AI</div>
+          <h2 class="slide-title">Onboard Edge AI Perception Pipeline</h2>
+          <p class="slide-subtitle">YOLOv8 TensorRT inference on NVIDIA Jetson Orin Nano</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Model Architecture:</strong> YOLOv8 Nano fine-tuned on aerial nadir disaster and survivor datasets.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Inference Performance:</strong> 28.5 FPS at 640x640 resolution using INT8 TensorRT quantization.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Human Survivor Detection:</strong> Identifies survivors trapped in debris and geotags GPS coordinates.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Multispectral NDVI Analysis:</strong> Computes <code>(NIR - Red) / (NIR + Red)</code> to map crop water stress and chlorosis.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Edge AI Vision</span><span>Slide 11 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 12: Ground Control Station -->
+      <div class="slide" data-notes="Our ground control station delivers commercial-grade situational awareness with a real-time artificial horizon HUD, 3D attitude visualization, and instant mission upload capabilities.">
+        <div class="slide-header">
+          <div class="slide-tag">Software Engineering</div>
+          <h2 class="slide-title">Ground Control Station (GCS) Interface</h2>
+          <p class="slide-subtitle">Real-time situational awareness and digital twin</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Web-Based Architecture:</strong> Zero-install ground station accessible on field tablets and laptops.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Aviation Primary Flight Display (PFD):</strong> Artificial horizon HUD, airspeed tape, altimeter tape, and compass.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Interactive 3D Digital Twin:</strong> Visualizes real-time roll/pitch/yaw angles, flight path, and obstacles.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Mission Command Center:</strong> Click-to-fly waypoint dispatch, arm/disarm toggles, and RTL commands.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Ground Station</span><span>Slide 12 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 13: Experimental Results -->
+      <div class="slide" data-notes="During extensive field testing, measured flight time aligned within 4.6% of our theoretical power calculations, with an outstanding survivor detection precision of 94.2%.">
+        <div class="slide-header">
+          <div class="slide-tag">Validation & Results</div>
+          <h2 class="slide-title">Experimental Benchmarking & Field Tests</h2>
+          <p class="slide-subtitle">Validation of mathematical models against empirical flight data</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Hover Flight Time:</strong> Theoretical 28.5 mins vs. Measured 27.2 mins (95.4% model accuracy).</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Position Hold Accuracy:</strong> Horizontal drift &lt; 0.18 m | Vertical drift &lt; 0.05 m in 15 km/h crosswinds.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Trajectory Tracking RMSE:</strong> Path following root-mean-square error &lt; 0.32 m along survey grids.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>AI Perception Precision:</strong> 94.2% mAP@50 on human survivor test dataset.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Experimental Validation</span><span>Slide 13 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 14: Bill of Materials & Cost -->
+      <div class="slide" data-notes="From a commercial perspective, our prototype was fabricated for under $1,450 USD, delivering enterprise-level edge AI capabilities that rival commercial drones costing over $8,500.">
+        <div class="slide-header">
+          <div class="slide-tag">Economic Viability</div>
+          <h2 class="slide-title">Bill of Materials (BOM) & Cost Breakdown</h2>
+          <p class="slide-subtitle">Component costs and commercial enterprise comparison</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Carbon Fiber 500mm Airframe:</strong> $85 USD</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Propulsion (4x 380KV Motors, ESCs & Props):</strong> $200 USD</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>6S 6500mAh 35C LiPo Battery Pack:</strong> $125 USD</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Pixhawk 6C Autopilot & Centimeter RTK-GPS:</strong> $280 USD</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>NVIDIA Jetson Orin Nano Companion Computer:</strong> $499 USD</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>4K Gimbal & Multispectral Camera:</strong> $260 USD</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Total System Prototype Cost:</strong> <strong>$1,449 USD</strong> (vs. $8,500+ commercial enterprise units).</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>BOM & Cost</span><span>Slide 14 of 15</span></div>
+      </div>
+
+      <!-- SLIDE 15: Conclusion & Q&A -->
+      <div class="slide" data-notes="In conclusion, AeroGuard-X1 demonstrates the successful synthesis of aerospace design, control theory, and edge computing. Thank you for your time and guidance. We now welcome questions from the committee.">
+        <div class="slide-header">
+          <div class="slide-tag">Summary & Defense</div>
+          <h2 class="slide-title">Conclusion & Viva Defense</h2>
+          <p class="slide-subtitle">Summary of capstone contributions and open evaluation</p>
+        </div>
+        <div class="slide-body">
+          <div class="slide-col">
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Key Accomplishment:</strong> Successfully designed, modeled, and validated an autonomous multi-mission UAV combining 6-DOF control, 28 min endurance, and edge AI vision.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Future Roadmap:</strong> Multi-UAV swarm collaboration, automated wireless inductive charging pads, and hybrid VTOL transition.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Acknowledgements:</strong> Sincere gratitude to our project supervisor, evaluation panel, and laboratory staff.</div></div>
+            <div class="bullet-item"><span class="bullet-dot"></span><div><strong>Open for Evaluation:</strong> Thank you! We are now ready for committee questions.</div></div>
+          </div>
+        </div>
+        <div class="slide-footer"><span>Defense Conclusion</span><span>Slide 15 of 15</span></div>
+      </div>
+
+      <!-- Bottom Progress Bar -->
+      <div class="progress-bar-container">
+        <div id="slideProgressBar" class="progress-bar"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Speaker Notes Drawer (Toggled by 'N') -->
+  <div id="notesDrawer" class="notes-drawer">
+    <div class="notes-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <strong style="color: #38bdf8;">📝 Presenter Defense Notes</strong>
+        <span style="font-size: 0.75rem; color: var(--text-dim);">Press 'N' to close</span>
+      </div>
+      <div>
+        <span style="font-size: 0.75rem; color: var(--text-muted); margin-right: 8px;">Defense Timer:</span>
+        <span id="defenseTimer" class="notes-timer">00:00</span>
+      </div>
+    </div>
+    <div id="speakerNotesContent" class="notes-text">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+
+  <!-- Slide Overview Grid Modal (Toggled by 'O') -->
+  <div id="overviewModal" class="overview-modal">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto 24px auto;">
+      <h2 style="color: #38bdf8; font-size: 1.3rem;">Slide Deck Overview</h2>
+      <button id="btnCloseOverview" class="btn-ctrl">✕ Close (Esc)</button>
+    </div>
+    <div id="overviewGridContainer" class="overview-grid">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+
+  <script src="js/presentation.js"></script>
+</body>
+</html>
+

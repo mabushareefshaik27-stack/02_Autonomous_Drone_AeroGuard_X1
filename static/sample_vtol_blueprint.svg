@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="100%" style="background-color: #07152b; font-family: 'Courier New', Courier, monospace;">
+
+            <defs>
+              <!-- Fine Blueprint Grid Pattern -->
+              <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0e2a54" stroke-width="0.75"/>
+              </pattern>
+              <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                <rect width="100" height="100" fill="url(#smallGrid)"/>
+                <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#18427e" stroke-width="1.5"/>
+              </pattern>
+
+              <!-- Dimension Arrow Markers -->
+              <marker id="arrowStart" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 10 0 L 0 5 L 10 10 z" fill="#38bdf8"/>
+              </marker>
+              <marker id="arrowEnd" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+              </marker>
+              <marker id="dotMarker" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5">
+                <circle cx="5" cy="5" r="4" fill="#f59e0b"/>
+              </marker>
+            </defs>
+            
+<rect width="1600" height="1000" fill="url(#grid)"/>
+<rect x="25" y="25" width="1550" height="950" fill="none" stroke="#1d4e89" stroke-width="2"/>
+<rect x="35" y="35" width="1530" height="930" fill="none" stroke="#38bdf8" stroke-width="1"/>
+<line x1="800.0" y1="35" x2="800.0" y2="965" stroke="#1d4e89" stroke-dasharray="8,6" stroke-width="1"/>
+<line x1="35" y1="500.0" x2="1565" y2="500.0" stroke="#1d4e89" stroke-dasharray="8,6" stroke-width="1"/>
+<g id="top_view">
+<text x="210" y="80" fill="#38bdf8" font-size="13" font-weight="bold" letter-spacing="1">VIEW A-A : TOP PLAN PROJECTION</text>
+<text x="210" y="95" fill="#64748b" font-size="10">SCALE: 1:10 | THIRD-ANGLE PROJECTION</text>
+<rect x="389.84" y="243.792" width="40.32" height="52.416000000000004" rx="12" fill="#0d2448" stroke="#38bdf8" stroke-width="2"/>
+<circle cx="410" cy="270" r="14.111999999999998" fill="none" stroke="#1d4e89" stroke-width="1.5" stroke-dasharray="4,3"/>
+<circle cx="410" cy="270" r="3" fill="#f59e0b"/>
+<text x="416" y="264" fill="#f59e0b" font-size="8">C.G.</text>
+<polygon points="410,231.792 404,241.792 416,241.792" fill="#f43f5e"/>
+<line x1="410" y1="270" x2="457.517575695736" y2="317.517575695736" stroke="#38bdf8" stroke-width="5"/>
+<line x1="410" y1="270" x2="457.517575695736" y2="317.517575695736" stroke="#0b172a" stroke-width="2"/>
+<circle cx="457.517575695736" cy="317.517575695736" r="12" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<circle cx="457.517575695736" cy="317.517575695736" r="5" fill="#f59e0b"/>
+<circle cx="457.517575695736" cy="317.517575695736" r="29.870399999999997" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="443.517575695736" y="321.517575695736" fill="#94a3b8" font-size="7">CCW ↺</text>
+<line x1="410" y1="270" x2="362.482424304264" y2="317.517575695736" stroke="#38bdf8" stroke-width="5"/>
+<line x1="410" y1="270" x2="362.482424304264" y2="317.517575695736" stroke="#0b172a" stroke-width="2"/>
+<circle cx="362.482424304264" cy="317.517575695736" r="12" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<circle cx="362.482424304264" cy="317.517575695736" r="5" fill="#f59e0b"/>
+<circle cx="362.482424304264" cy="317.517575695736" r="29.870399999999997" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="348.482424304264" y="321.517575695736" fill="#94a3b8" font-size="7">CW ↻</text>
+<line x1="410" y1="270" x2="362.482424304264" y2="222.48242430426401" stroke="#38bdf8" stroke-width="5"/>
+<line x1="410" y1="270" x2="362.482424304264" y2="222.48242430426401" stroke="#0b172a" stroke-width="2"/>
+<circle cx="362.482424304264" cy="222.48242430426401" r="12" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<circle cx="362.482424304264" cy="222.48242430426401" r="5" fill="#f59e0b"/>
+<circle cx="362.482424304264" cy="222.48242430426401" r="29.870399999999997" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="348.482424304264" y="226.48242430426401" fill="#94a3b8" font-size="7">CCW ↺</text>
+<line x1="410" y1="270" x2="457.517575695736" y2="222.482424304264" stroke="#38bdf8" stroke-width="5"/>
+<line x1="410" y1="270" x2="457.517575695736" y2="222.482424304264" stroke="#0b172a" stroke-width="2"/>
+<circle cx="457.517575695736" cy="222.482424304264" r="12" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<circle cx="457.517575695736" cy="222.482424304264" r="5" fill="#f59e0b"/>
+<circle cx="457.517575695736" cy="222.482424304264" r="29.870399999999997" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1" stroke-dasharray="5,4"/>
+<text x="443.517575695736" y="226.482424304264" fill="#94a3b8" font-size="7">CW ↻</text>
+<rect x="285.2" y="263.28" width="249.6" height="13.44" rx="6" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1.5"/>
+<text x="494.79999999999995" y="259.28" fill="#10b981" font-size="8">MAIN WING: 2.2m</text>
+
+        <g stroke="#38bdf8" stroke-width="1">
+          <line x1="457.517575695736" y1="336.517575695736" x2="457.517575695736" y2="348.517575695736"/>
+          <line x1="362.482424304264" y1="241.48242430426401" x2="362.482424304264" y2="253.48242430426401"/>
+          <line x1="457.517575695736" y1="342.517575695736" x2="362.482424304264" y2="247.48242430426401" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+        </g>
+        <rect x="340.0" y="287.0" width="140" height="15" fill="#07152b"/>
+        <text x="410.0" y="298.0" fill="#ffffff" font-size="9" text-anchor="middle" font-weight="bold">Ø 800 mm (WHEELBASE)</text>
+        
+</g>
+<g id="iso_view">
+<text x="1020" y="80" fill="#38bdf8" font-size="13" font-weight="bold" letter-spacing="1">ISOMETRIC 3D CAD PROJECTION</text>
+<text x="1020" y="95" fill="#64748b" font-size="10">AXONOMETRIC 30° / 30° PERSPECTIVE</text>
+<polygon points="1180,251.36 1194.5488,259.76 1180,268.16 1165.4512,259.76" fill="#0d2448" stroke="#38bdf8" stroke-width="2"/>
+<polygon points="1165.4512,259.76 1180,268.16 1180,286.8 1165.4512,278.4" fill="#081830" stroke="#38bdf8" stroke-width="1.5"/>
+<polygon points="1180,268.16 1194.5488,259.76 1194.5488,278.4 1180,286.8" fill="#0f2e5a" stroke="#38bdf8" stroke-width="1.5"/>
+<line x1="1180" y1="270" x2="1233.20704" y2="300.72" stroke="#38bdf8" stroke-width="4"/>
+<line x1="1180" y1="270" x2="1233.20704" y2="300.72" stroke="#0b172a" stroke-width="1.5"/>
+<ellipse cx="1233.20704" cy="300.72" rx="8" ry="4" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="1225.20704" y="292.72" width="16" height="8" fill="#0b172a" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1233.20704" cy="292.72" rx="8" ry="4" fill="#f59e0b" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1233.20704" cy="292.72" rx="16.32" ry="5.76" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+<line x1="1180" y1="270" x2="1126.79296" y2="300.72" stroke="#38bdf8" stroke-width="4"/>
+<line x1="1180" y1="270" x2="1126.79296" y2="300.72" stroke="#0b172a" stroke-width="1.5"/>
+<ellipse cx="1126.79296" cy="300.72" rx="8" ry="4" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="1118.79296" y="292.72" width="16" height="8" fill="#0b172a" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1126.79296" cy="292.72" rx="8" ry="4" fill="#f59e0b" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1126.79296" cy="292.72" rx="16.32" ry="5.76" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+<line x1="1180" y1="270" x2="1126.79296" y2="239.28" stroke="#38bdf8" stroke-width="4"/>
+<line x1="1180" y1="270" x2="1126.79296" y2="239.28" stroke="#0b172a" stroke-width="1.5"/>
+<ellipse cx="1126.79296" cy="239.28" rx="8" ry="4" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="1118.79296" y="231.28" width="16" height="8" fill="#0b172a" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1126.79296" cy="231.28" rx="8" ry="4" fill="#f59e0b" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1126.79296" cy="231.28" rx="16.32" ry="5.76" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+<line x1="1180" y1="270" x2="1233.20704" y2="239.28" stroke="#38bdf8" stroke-width="4"/>
+<line x1="1180" y1="270" x2="1233.20704" y2="239.28" stroke="#0b172a" stroke-width="1.5"/>
+<ellipse cx="1233.20704" cy="239.28" rx="8" ry="4" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="1225.20704" y="231.28" width="16" height="8" fill="#0b172a" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1233.20704" cy="231.28" rx="8" ry="4" fill="#f59e0b" stroke="#38bdf8" stroke-width="1"/>
+<ellipse cx="1233.20704" cy="231.28" rx="16.32" ry="5.76" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+</g>
+<g id="front_view">
+<text x="210" y="620" fill="#38bdf8" font-size="13" font-weight="bold" letter-spacing="1">VIEW B-B : FRONT ELEVATION</text>
+<text x="210" y="635" fill="#64748b" font-size="10">VERTICAL CLEARANCE & STRUT GEOMETRY</text>
+<line x1="292.9296" y1="776.0" x2="527.0704000000001" y2="776.0" stroke="#64748b" stroke-width="1.5" stroke-dasharray="10,4"/>
+<text x="532.0704000000001" y="779.0" fill="#64748b" font-size="8">GROUND DATUM</text>
+<line x1="359.6" y1="750" x2="344.6" y2="776.0" stroke="#38bdf8" stroke-width="3"/>
+<line x1="460.4" y1="750" x2="475.4" y2="776.0" stroke="#38bdf8" stroke-width="3"/>
+<line x1="324.6" y1="776.0" x2="379.6" y2="776.0" stroke="#38bdf8" stroke-width="4"/>
+<line x1="440.4" y1="776.0" x2="495.4" y2="776.0" stroke="#38bdf8" stroke-width="4"/>
+<rect x="390.8" y="718.4" width="38.4" height="31.599999999999998" rx="6" fill="#0d2448" stroke="#38bdf8" stroke-width="2"/>
+<line x1="342.8" y1="740" x2="477.2" y2="740" stroke="#38bdf8" stroke-width="5"/>
+<rect x="334.8" y="724" width="16" height="16" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<line x1="312.9296" y1="722" x2="372.67040000000003" y2="722" stroke="#f59e0b" stroke-width="2"/>
+<ellipse cx="342.8" cy="722" rx="29.870399999999997" ry="4" fill="none" stroke="rgba(56,189,248,0.3)" stroke-dasharray="4,3"/>
+<rect x="469.2" y="724" width="16" height="16" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5"/>
+<line x1="447.32959999999997" y1="722" x2="507.0704" y2="722" stroke="#f59e0b" stroke-width="2"/>
+<ellipse cx="477.2" cy="722" rx="29.870399999999997" ry="4" fill="none" stroke="rgba(56,189,248,0.3)" stroke-dasharray="4,3"/>
+<circle cx="410" cy="758" r="12" fill="#0b172a" stroke="#f59e0b" stroke-width="2"/>
+<line x1="410" y1="745" x2="410" y2="758" stroke="#f59e0b" stroke-width="2"/>
+
+        <g stroke="#38bdf8" stroke-width="1">
+          <line x1="291.9296" y1="722" x2="303.9296" y2="722"/>
+          <line x1="291.9296" y1="776.0" x2="303.9296" y2="776.0"/>
+          <line x1="297.9296" y1="722" x2="297.9296" y2="776.0" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+        </g>
+        <rect x="289.9296" y="704.0" width="16" height="90" fill="#07152b"/>
+        <text x="300.9296" y="749.0" fill="#ffffff" font-size="9" text-anchor="middle" font-weight="bold" transform="rotate(-90, 297.9296, 749.0)">336 mm (HEIGHT)</text>
+        
+</g>
+<g id="side_view">
+<text x="770" y="620" fill="#38bdf8" font-size="13" font-weight="bold" letter-spacing="1">VIEW C-C : SIDE PROFILE</text>
+<text x="770" y="635" fill="#64748b" font-size="10">AERODYNAMIC PROFILE & CAMBER</text>
+<path d="M 909.6800000000001 740 Q 950 716.0 996.08 732 Q 950 752.0 909.6800000000001 740 Z" fill="#0d2448" stroke="#38bdf8" stroke-width="2"/>
+<line x1="915.44" y1="776.0" x2="984.56" y2="776.0" stroke="#38bdf8" stroke-width="4"/>
+<line x1="935.6" y1="750" x2="930.8" y2="776.0" stroke="#38bdf8" stroke-width="2.5"/>
+<line x1="964.4" y1="750" x2="969.2" y2="776.0" stroke="#38bdf8" stroke-width="2.5"/>
+<circle cx="987.44" cy="755" r="11" fill="#0b172a" stroke="#f59e0b" stroke-width="2"/>
+<line x1="987.44" y1="755" x2="1005.44" y2="764" stroke="#f59e0b" stroke-dasharray="3,2" stroke-width="1.5"/>
+<line x1="940.4" y1="725.6" x2="940.4" y2="713.6" stroke="#38bdf8" stroke-width="2"/>
+<circle cx="940.4" cy="713.6" r="7" fill="#0d2448" stroke="#38bdf8" stroke-width="1.5"/>
+</g>
+
+        <g id="title_block" transform="translate(1170, 820)">
+          <rect width="390" height="140" fill="#091c36" stroke="#38bdf8" stroke-width="1.5"/>
+          <line x1="0" y1="32" x2="390" y2="32" stroke="#1d4e89" stroke-width="1"/>
+          <line x1="0" y1="68" x2="390" y2="68" stroke="#1d4e89" stroke-width="1"/>
+          <line x1="0" y1="104" x2="390" y2="104" stroke="#1d4e89" stroke-width="1"/>
+          <line x1="234.0" y1="32" x2="234.0" y2="140" stroke="#1d4e89" stroke-width="1"/>
+
+          <!-- Title Header -->
+          <text x="12" y="22" fill="#38bdf8" font-size="12" font-weight="bold" letter-spacing="1">AEROGUARD AUTONOMOUS AEROSPACE SYSTEMS</text>
+          
+          <!-- Drawing Title -->
+          <text x="12" y="50" fill="#94a3b8" font-size="8">DESIGNATION & MODEL:</text>
+          <text x="12" y="62" fill="#ffffff" font-size="10" font-weight="bold">AERORESCUE-SAR</text>
+
+          <text x="244.0" y="50" fill="#94a3b8" font-size="8">AIRFRAME CONFIG:</text>
+          <text x="244.0" y="62" fill="#f59e0b" font-size="9" font-weight="bold">VTOL_QUADPLANE</text>
+
+          <!-- Engineering Specs line -->
+          <text x="12" y="85" fill="#94a3b8" font-size="8">DRAWING NUMBER:</text>
+          <text x="12" y="97" fill="#38bdf8" font-size="9" font-weight="bold">AG-CAD-2026-X1</text>
+
+          <text x="244.0" y="85" fill="#94a3b8" font-size="8">STATUS & REV:</text>
+          <text x="244.0" y="97" fill="#10b981" font-size="9" font-weight="bold">RELEASED (REV C.4)</text>
+
+          <!-- Approval line -->
+          <text x="12" y="123" fill="#64748b" font-size="8">ENGINEER: AI AEROSPACE CORE | SHEET 01 OF 01</text>
+          <text x="244.0" y="123" fill="#64748b" font-size="8">UNITS: METRIC (mm)</text>
+        </g>
+        
+
+        <g id="spec_box">
+          <rect x="50" y="50" width="280" height="157" fill="rgba(9, 28, 54, 0.85)" stroke="#1d4e89" stroke-width="1"/>
+          <rect x="50" y="50" width="280" height="24" fill="#0d2448"/>
+          <text x="62" y="66" fill="#38bdf8" font-size="10" font-weight="bold" letter-spacing="1">PARAMETRIC ENGINEERING SPECS</text>
+          <text x="62" y="90" fill="#cbd5e1" font-size="9">WHEELBASE:        800 mm</text><text x="62" y="106" fill="#cbd5e1" font-size="9">PROPELLERS:       14.0 inch Carbon</text><text x="62" y="122" fill="#cbd5e1" font-size="9">TAKEOFF WT (AUW): 5.20 kg</text><text x="62" y="138" fill="#cbd5e1" font-size="9">PAYLOAD CAP:      2.50 kg</text><text x="62" y="154" fill="#cbd5e1" font-size="9">BATTERY PACK:     6S 10000mAh Semi-Solid Cell</text><text x="62" y="170" fill="#cbd5e1" font-size="9">EST. ENDURANCE:   32.0 mins</text><text x="62" y="186" fill="#cbd5e1" font-size="9">TOP SPEED:        65 km/h</text>
+        </g>
+        
+</svg>

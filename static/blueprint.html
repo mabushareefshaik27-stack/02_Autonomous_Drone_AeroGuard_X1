@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroGuard-X1: AI Drone Blueprint & Image Studio</title>
+  <link rel="stylesheet" href="css/blueprint.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+</head>
+<body>
+
+  <!-- Studio Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">
+        <svg style="width: 16px; height: 16px; fill: #fff;" viewBox="0 0 24 24"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.8L18 8.5v7l-6 3.7-6-3.7v-7l6-3.7z"/></svg>
+      </div>
+      <span>AeroGuard AI CAD & Blueprint Studio</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="btn">🏠 Portal</a>
+      <a href="gcs.html" class="btn">🎮 Flight GCS HUD</a>
+      <a href="presentation.html" class="btn">📽️ Defense Deck</a>
+      <a href="/api/drone/download-pptx" class="btn btn-primary">💾 Download PPTX</a>
+    </div>
+  </header>
+
+  <!-- Prompt Studio Hero -->
+  <section class="prompt-hero">
+    <div class="prompt-hero-header">
+      <div class="studio-badge">GENERATIVE AEROSPACE CAD ENGINE</div>
+      <h1>Prompt-to-Drone Blueprint & Image Generator</h1>
+      <p>Enter any natural language prompt describing mission requirements, airframe type, payload, or specialized equipment to dynamically generate aerospace CAD blueprints, multi-view technical drawings, and dimensioned schematics.</p>
+    </div>
+
+    <!-- Prompt Input Row -->
+    <div class="prompt-input-row">
+      <input type="text" id="promptInput" class="prompt-input" placeholder="e.g. Heavy-lift agricultural hexacopter with 20L spray tank and folding arms..." />
+      <button id="btnGenerate" class="btn btn-primary btn-generate">Generate Blueprint & Image ⚡</button>
+    </div>
+
+    <!-- Quick Preset Prompt Chips -->
+    <div class="preset-chips-row" id="presetChipsContainer">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- Main Studio Workspace Grid -->
+  <main class="studio-layout">
+
+    <!-- Left Column: Interactive CAD Blueprint & Visualizer -->
+    <div class="blueprint-card">
+      <div class="blueprint-toolbar">
+        <!-- Display Type Switcher: Blueprint vs Render -->
+        <div style="display: flex; gap: 8px;">
+          <div class="view-mode-selector">
+            <button id="btnDisplayBlueprint" class="view-btn active" style="font-weight: 700;">📐 CAD Blueprint</button>
+            <button id="btnDisplayRender" class="view-btn" style="font-weight: 700;">📸 AI Drone Render</button>
+          </div>
+
+          <!-- View Mode Switcher (Active for CAD) -->
+          <div id="cadViewSelector" class="view-mode-selector">
+            <button class="view-btn active" data-view="multiview">4-View Orthographic</button>
+            <button class="view-btn" data-view="top">Top</button>
+            <button class="view-btn" data-view="front">Front</button>
+            <button class="view-btn" data-view="side">Side</button>
+            <button class="view-btn" data-view="isometric">Isometric 3D</button>
+          </div>
+        </div>
+
+        <!-- Quick Viewport Actions -->
+        <div class="blueprint-actions">
+          <button id="btnDownloadSvg" class="btn" title="Download Vector CAD Blueprint (SVG)">💾 Download SVG</button>
+          <button id="btnDownloadPng" class="btn btn-primary" title="Download High-Res Blueprint Image (PNG)">🖼️ Download PNG Image</button>
+        </div>
+      </div>
+
+      <!-- Blueprint & Render Drawing Viewport -->
+      <div class="blueprint-canvas-viewport">
+        <!-- Injected Vector SVG Blueprint -->
+        <div id="blueprintSvgContainer"></div>
+
+        <!-- Image Loading Spinner -->
+        <div id="imageLoadingSpinner" class="image-loading" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);">
+          <div class="cad-spinner"></div>
+          <span style="font-size:0.85rem; color:#38bdf8; margin-top:8px; font-weight:bold;">Generating AI Render...</span>
+        </div>
+
+        <!-- Loading Spinner Overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+          <div class="cad-spinner"></div>
+          <span style="font-size: 0.85rem; color: #38bdf8; margin-top: 14px; font-weight: bold; letter-spacing: 1px;">GEMINI AI SYNTHESIZING AEROSPACE CAD & IMAGE...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Engineering Specifications & Bill of Materials -->
+    <div class="spec-panel">
+
+      <!-- Spec Header Card -->
+      <div class="spec-card">
+        <div class="drone-header-block">
+          <h2 id="specDroneName" class="drone-name-title">AeroSpray-H6</h2>
+          <span id="specDroneConfig" class="drone-config-pill">HEXACOPTER</span>
+        </div>
+
+        <div class="spec-card-title">
+          <span>Aeronautical Specifications</span>
+          <span style="color: var(--emerald);">ISO 9001 / CAD</span>
+        </div>
+
+        <div class="spec-grid-compact">
+          <div class="spec-item-box">
+            <div class="spec-lbl">Wheelbase (Ø)</div>
+            <div id="valWheelbase" class="spec-num">750 mm</div>
+          </div>
+          <div class="spec-item-box">
+            <div class="spec-lbl">Takeoff Mass (AUW)</div>
+            <div id="valAuw" class="spec-num">6.80 kg</div>
+          </div>
+          <div class="spec-item-box">
+            <div class="spec-lbl">Payload Capacity</div>
+            <div id="valPayload" class="spec-num" style="color: var(--amber);">4.00 kg</div>
+          </div>
+          <div class="spec-item-box">
+            <div class="spec-lbl">Propeller Diameter</div>
+            <div id="valProps" class="spec-num">16.0" Carbon</div>
+          </div>
+          <div class="spec-item-box">
+            <div class="spec-lbl">Hover Flight Time</div>
+            <div id="valFlightTime" class="spec-num" style="color: var(--cyan);">24.0 mins</div>
+          </div>
+          <div class="spec-item-box">
+            <div class="spec-lbl">Max Airspeed</div>
+            <div id="valSpeed" class="spec-num">35 km/h</div>
+          </div>
+          <div class="spec-item-box" style="grid-column: span 2;">
+            <div class="spec-lbl">Motor Rating & Sizing</div>
+            <div id="valMotorKv" class="spec-num" style="font-size: 1rem;">320 KV High-Torque Outrunners</div>
+          </div>
+          <div class="spec-item-box" style="grid-column: span 2;">
+            <div class="spec-lbl">Battery Architecture</div>
+            <div id="valBattery" class="spec-num" style="font-size: 0.95rem; color: #a7f3d0;">12S 22000mAh Smart LiPo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Engineering Features Card -->
+      <div class="spec-card">
+        <div class="spec-card-title">
+          <span>Synthesized Mission Equipment</span>
+        </div>
+        <div id="specFeaturesList" class="features-list">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- Gemini AI Engineering Analysis Card -->
+      <div class="spec-card" style="border-left: 3px solid #38bdf8;">
+        <div class="spec-card-title">
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Gemini Engineering Rationale
+          </span>
+          <span style="font-size: 0.65rem; color: #10b981;">KEY VERIFIED</span>
+        </div>
+        <div id="geminiAiAnalysisText" style="font-size: 0.78rem; line-height: 1.5; color: #cbd5e1;">
+          Synthesizing structural and propulsion analysis...
+        </div>
+      </div>
+
+      <!-- Action Card -->
+      <div class="spec-card export-card">
+        <button id="btnExportJson" class="btn btn-export">📄 Export Technical Spec Sheet (JSON)</button>
+        <button id="btnPrintDrawing" class="btn btn-export">🖨️ Print Technical Engineering Drawing</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/blueprint.js"></script>
+</body>
+</html>
+
