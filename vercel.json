@@ -3,14 +3,15 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/api/drone/telemetry", "destination": "/api/telemetry.py" },
-    { "source": "/api/drone/specs", "destination": "/api/specs.py" }
+    { "source": "/api/drone/specs", "destination": "/api/specs.py" },
+    { "source": "/api/drone/download-pptx", "destination": "/api/download_pptx.py" },
+    { "source": "/api/drone/events", "destination": "/api/events.py" },
+    { "source": "/", "destination": "/static/index.html" },
+    { "source": "/gcs.html", "destination": "/static/gcs.html" },
+    { "source": "/presentation.html", "destination": "/static/presentation.html" },
+    { "source": "/blueprint.html", "destination": "/static/blueprint.html" }
   ],
-  "static": {
-    "directory": "static",
-    "public": true
-  },
   "routes": [
     { "src": "/(.*)", "dest": "/static/$1" }
   ]
 }
-
