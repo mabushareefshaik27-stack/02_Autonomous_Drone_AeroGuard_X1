@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/drone/telemetry", "destination": "/api/telemetry.py" },
+    { "source": "/api/drone/specs", "destination": "/api/specs.py" }
+  ],
+  "static": {
+    "directory": "static",
+    "public": true
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/static/$1" }
+  ]
+}
+
